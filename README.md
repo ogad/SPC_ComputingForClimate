@@ -1,5 +1,5 @@
 # Computing for Climate Science
-2024-10-23 --- Oliver Driver
+2024-10-23 — Oliver Driver
 
 The materials in this repository are to support the course "Python for Climate Science" in the Space, Plasma, & Climate Physics Community at Imperial College London.
 
@@ -12,19 +12,18 @@ The aims of the course are to:
  - Provide a reference for the future.
 
 ## Course Structure
-1. Introduction
-2. Using the computers
-    - Visual Studio Code
-    - The Command Line
-    - SSH
-3. Version control
-    - Git
-    - GitHub
-4. Python for Science
-    - Anaconda and Virtual Environments
-    - IPython
-    - Python packages
-5. Climate data
-    - NetCDF files
-    - XArray
-    - Panoply
+0. Introduction
+1. The command line
+2. Visual Studio Code
+3. Remote machines and SSH
+4. Version control
+  - Git
+  - GitHub
+5. Python
+  - Anaconda and Virtual Environments
+  - IPython
+  - Python packages
+6. Climate data
+  - NetCDF files
+  - XArray
+  - Panoply
