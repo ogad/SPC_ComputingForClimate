@@ -33,10 +33,25 @@ The tool [`tldr`](https://tldr.sh/) is worth trying out if you're spending some 
 The hardcore documentation tool is `man`—this can be used to explore
 
 ## Navigating the file system
-The most basic commands give you a way to interact with the file system:
+The file systems on Unix-style machines have some differences to Windows—they're more similar to Macs.
+The root directory (at the base of the file system) is "`\`".
+All file locations in the file system begin with this.
+
+File paths can be specified as *absolute* (meaning relative to the root directory, so beginning with `\`) or *relative* (meaning starting from the current "working directory").
+Relative paths begin straight away with a file or directory name.
+You can also specify paths to start from your "home" directory using the `~` character.
+The home directory is your personal space, where you can store your own files, configurations, and applications.
+
+
+Some basic commands give you a way to interact with the file system:
 - [`pwd`](https://tldr.inbrowser.app/pages/common/pwd) Display the name of the current "working directory".
 - [`cd`](https://tldr.inbrowser.app/pages/common/cd) Change the current working directory.
 - [`ls`](https://tldr.inbrowser.app/pages/common/ls) List the files in the current working directory.
+
+Files beginning with a `.` are "hidden".
+By default, they are not shown in lists of file names, or in graphical interfaces.
+Using `ls`, the `-a` option includes these files.
+Running `ls -a`, we see two special hidden files: "`.`", which refers to the current folder, and "`..`", which refers to the parent folder.
 
 You can manipulate files:
 - [`mv`](https://tldr.inbrowser.app/pages/common/mv) Move or rename a file.
@@ -57,9 +72,8 @@ Other commands useful for file creation are:
 - [`echo`](https://tldr.inbrowser.app/pages/common/echo) Displays its argument. Can be useful when applied in conjuction with redirection.
 
 Files can be viewed by displaying their contents:
-- [`cat`](https://tldr.inbrowser.app/pages/common/cat) Display the contents of a file
-or by using a "pager":
-- [`less`](https://tldr.inbrowser.app/pages/common/less)
+- [`cat`](https://tldr.inbrowser.app/pages/common/cat) Display the contents of a file.
+- [`less`](https://tldr.inbrowser.app/pages/common/less) Show the file contents using a "pager".
 
 The command line can also be used to lauch editors:
 - `nano` A basic text editor
@@ -78,10 +92,9 @@ Note that STDIN isn't the same as the command's arguments—it's more often the 
 This also works well for viewing large output using a pager like `less` instead of viewing them all in the command line (i.e. `ls -1 | less`).
 
 Useful commands for making good use of this include:
-- [`wc`] Count words in the input (or lines, etc.).
-- [`uniq`] Show unique lines from the input.
-- [`sort`] Sort the input.
-
+- [`wc`](https://tldr.inbrowser.app/pages/common/wc) Count words in the input (or lines, etc.).
+- [`uniq`](https://tldr.inbrowser.app/pages/common/uniq) Show unique lines from the input.
+- [`sort`](https://tldr.inbrowser.app/pages/common/sort) Sort the input.
 
 ## Sources
 - [Ubuntu Tutorials: The Linux Command Line for Beginners](https://ubuntu.com/tutorials/command-line-for-beginners)
