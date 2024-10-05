@@ -68,6 +68,21 @@ The command line can also be used to lauch editors:
 Experienced users will tend to choose one of either `vim` or `emacs` and use it frequently.
 You can also install command line interfaces for graphical IDEs (like VS Code) and launch them from the command line.
 
+## Piping
+Command outputs to another command as input.
+The pipe symbol (`|`) after a command pipes its "standard output", often called `STDOUT`, to the next command's "standard input", `STDIN`.
+
+For example, to find the number of files in a folder we could pipe the output from `ls -1` (list the files in the working directory with one file on each line) to `wc -l` (count the number of lines in the input).
+Altogether, the command to run would be `ls -l | wc -l`.
+Note that STDIN isn't the same as the command's arguments—it's more often the contents of the file you'd pass as an argument.
+This also works well for viewing large output using a pager like `less` instead of viewing them all in the command line (i.e. `ls -1 | less`).
+
+Useful commands for making good use of this include:
+- [`wc`] Count words in the input (or lines, etc.).
+- [`uniq`] Show unique lines from the input.
+- [`sort`] Sort the input.
+
+
 ## Sources
 - [Ubuntu Tutorials: The Linux Command Line for Beginners](https://ubuntu.com/tutorials/command-line-for-beginners)
 - [William Smith, The Linux Command Line](https://linuxcommand.org/tlcl.php)
