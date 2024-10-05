@@ -98,6 +98,19 @@ Useful commands for making good use of this include:
 - [`uniq`](https://tldr.inbrowser.app/pages/common/uniq) Show unique lines from the input.
 - [`sort`](https://tldr.inbrowser.app/pages/common/sort) Sort the input.
 
+## Shell scripting
+As well as excuting commands in the command line, you can write shell scripts.
+You can do this by writing a file containing a list of commands and passing it to the `bash` command (or your shell of choice).
+Usually, these are given the file extension `.sh`.
+Shell scripts can contain any number of bash commands, and are useful for running e.g. sequences of python scripts.
+
+Shell scripts can also be made executable (i.e. runnable by quoting the pathname like a command) by beginning with a "shebang":
+```bash
+#!/bin/bash
+```
+You then also need to change the permissions of the file to be executable, read more in [1.3 The file system](./1_3_FileSystem.md).
+
+
 ## Sources
 - [Ubuntu Tutorials: The Linux Command Line for Beginners](https://ubuntu.com/tutorials/command-line-for-beginners)
 - [William Smith, The Linux Command Line](https://linuxcommand.org/tlcl.php)
