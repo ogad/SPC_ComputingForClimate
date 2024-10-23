@@ -1,4 +1,4 @@
-< [SSH and SCP](./3_2_SSH.md) | [Git](./Git.md) >
+< [Remote Machines](./3_1_RemoteMachines.md) | [Git](./4_1_Git.md) >
 
 # SSH and SCP
 Securely connecting your terminal to a remote machine.
@@ -30,3 +30,5 @@ You generate a public/private key pair, and copy it to a server.
 - Use [`ssh-copy-id`](https://tldr.inbrowser.app/pages/common/ssh-copy-id) to copy it to the server.
 
 The keys are also important for syncing remote repositories (e.g. on GitHub) over ssh.
+
+< [Remote Machines](./3_1_RemoteMachines.md) | [Git](./4_1_Git.md) >

@@ -1,3 +1,4 @@
+< [SSH and SCP](./3_2_SSH.md) | [Remotes and GitHub](./4_2_GitHub.md) >
 
 # Git
 Version control so you don't lose your work to a mistake.
@@ -20,11 +21,12 @@ Git is an open-source distributed version control system, designed with an empha
 In a git repository, files are:
 - **Modified**: altered from the last version, but not yet committed to the version control.
 - **Staged**: marked as ready to be added to the next snapshot.
-- **Committed**: stored and safe.
+- **Committed**: stored and safe—they return to an "**unmodified**" state in the working directory.
+Other files in the directory, are **untracked**—not held in the snapshots.
 
 Once committing a version of a file to the repositiory, it is stored in the ".git directory"—a hidden folder storing versions and metadata inside the "working directory" (which is the repo folder on your computer).
-
-![The parts of a git repository.](./img/git_states.png)
+These parts of a git repository are plotted below (taken from Pro Git, chapter 1).
+![The parts of a git repository.](./img/git_repo_parts.png)
 
 ## Setting up
 Git needs to be installed—often this is already done (especially on linux systems), but instructions can be found in the [Git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
@@ -38,3 +40,49 @@ You need to set your identity before you make any commits, because this informat
 git config --global user.name "Your Name"
 git config --global user.email your.email@imperial.ac.uk
 ```
+
+## Basic usage
+### Making a repo
+You get a repo by using either:
+- [`git init`](https://tldr.inbrowser.app/pages/common/git-init): turn an existing directory into a repo.
+- [`git clone`](https://tldr.inbrowser.app/pages/common/git-clone): get a copy of a *remote* repo (e.g. one hosted on GitHub). You can clone from an https url (which is simplest) or using ssh.
+
+Using `git clone` from a repo you make on GitHub is the easiest way to get your pushing and pulling ready to go.
+
+### Tracking changes
+Files in the directory are created as untracked, then you *add* them to the staging area.
+You can also *stage* any modified files.
+You can then *commit* your changes from the staging area to a new snapshot in the repo.
+You should do this each time you make a meaningful change—a state you might want to go back to.
+![The lifecycle of files in a repo.](./git_file_states.png)
+
+Commands to move files around in this way include:
+- [`git status`](https://tldr.inbrowser.app/pages/common/git-status): view the status of files (will show changed and untracked files).
+- [`git add`](https://tldr.inbrowser.app/pages/common/git-add): add changed/new files to the staging area. Note that this stages the **current version**, further changes need to be re-added.
+- [`git commit`](https://tldr.inbrowser.app/pages/common/git-commit): make a commit (of the files in the staging area to a new snapshot). Add a commit message with the `-m` option (otherwise you will be prompted).
+- [`git diff`](https://tldr.inbrowser.app/pages/common/git-diff): view the specific changes you've made.
+- [`git rm`](https://tldr.inbrowser.app/pages/common/git-rm): remove (or just untrack) files from the repo.
+
+Note: you can skip the staging area, and commit all changes to untracked files using `git commit -a`.
+
+### Undoing things
+Historic snapshots/commits can be viewed using [`git log`](https://tldr.inbrowser.app/pages/common/git-log).
+This is hugely customisable (e.g. try `--oneline`).
+
+`git commit --amend` can be used to fix mistakes in your last commit or last commit message (it will replace the commit to include changes that you've added to your staging area).
+Dont bother trying to do this if you've pushed your changes elsewhere—it will get messy!
+
+To revert changes you've made to the state they were in the previous commit, you can use [`git restore`](https://tldr.inbrowser.app/pages/common/git-restore).
+By using the `--staged` flag, you can use the command to unstage your changes.
+By using the `--source` flag, you can specify a different commit to restore from.
+
+## More to learn...
+There is a lot more to learn, especially about **branching** (a branch is a "pointer" which points to a specific snapshot).
+This also leads you to **merge commits**—making snapshots that have more than one parent.
+
+These, and more, are skills you'll come across but aren't vital for keeping track of your own work.
+
+## Sources
+The first few chapters of [Pro Git](https://git-scm.com/book/en/v2) were heaviliy used to write this section.
+
+< [SSH and SCP](./3_2_SSH.md) | [Remotes and GitHub](./4_2_GitHub.md) >
