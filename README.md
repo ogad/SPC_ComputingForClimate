@@ -6,7 +6,7 @@ The materials in this repository are to support the course "Python for Climate S
 ## Course Description
 This course covers the basic computational tools useful for a PhD in the Climate side of the Community.
 
-The aims of the course are to:  
+The aims of the course are to:
 - Introduce the tools used by PhD students in the group on a daily basis.
 - Practice some basic usage of these tools.
 - Provide a reference for the future.
@@ -23,7 +23,4 @@ The aims of the course are to:
 	- Anaconda and Virtual Environments
 	- IPython
 	- Python packages
-6. Climate data
-	- NetCDF files
-	- XArray
-	- Panoply
+	- NetCDF and XArray

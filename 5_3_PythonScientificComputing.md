@@ -1,4 +1,4 @@
-< [Using Python](./5_2_IPython.md) | [NetCDF Files](./6_1_NetCDF.md) >
+< [Using Python](./5_2_IPython.md) | [NetCDF Files](./5_4_NetCDFXArray.md) >
 # Python for Scientific Computing
 Doing the work you need to do. 
 
@@ -77,4 +77,4 @@ My best pieces of advice would be to let it make some of its own decisions (cons
 [Pandas](https://pandas.pydata.org/docs/)
 [Matplotlib](https://matplotlib.org/stable/users/explain/quick_start.html)
 
-< [Using Python](./5_2_IPython.md) | [NetCDF Files](./6_1_NetCDF.md) >
+< [Using Python](./5_2_IPython.md) | [NetCDF Files](./5_4_NetCDFXArray.md) >
