@@ -49,6 +49,8 @@ The plots are starting to look aged, but it is versatile and widely used.
 The seaborn package is one "wrapper" that can spruce up its look and provide some basic analysis.
 
 It has two different ways of interacting with it, either directly using `Figure` and `Axis` object, or using the `pyplot` wrapper (imported usually as `plt`).
+The anatomy figure is shown below (from the Matplotlib documentation).
+![Matplotlib: anatomy of a figure](./img/matplotlib_figure.webp)
 
 Basic plotting is done using `plt.plot` (or `ax.plot`).
 `plt.scatter` is more versatile (it can vary the colour and size of points), but is much less efficient as a result.
@@ -71,5 +73,8 @@ My best pieces of advice would be to let it make some of its own decisions (cons
 
 ## Sources
 [NumPy Documentation](https://numpy.org/doc/stable/user/)
+[Python data science handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+[Pandas](https://pandas.pydata.org/docs/)
+[Matplotlib](https://matplotlib.org/stable/users/explain/quick_start.html)
 
 < [Using Python](./5_2_IPython.md) | [NetCDF Files](./6_1_NetCDF.md) >
